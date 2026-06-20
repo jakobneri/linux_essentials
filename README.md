@@ -50,13 +50,11 @@ linux_essentials/
 
 ## Programme
 
-Installiert via `programs/install.sh` (alles über `apt`, außer cloudflared):
+Installiert via `programs/install.sh` (alles über `apt`):
 
 - `tmux`
 - `btop`
 - `htop`
-- `docker.io`
-- `cloudflared` — ARM64/AMD64-Binary direkt von Cloudflare (kein apt-Paket)
 
 ## Shortcuts
 
@@ -64,4 +62,3 @@ Installiert via `programs/install.sh` (alles über `apt`, außer cloudflared):
 - `t` → tmux smart-attach (`t` attached an Session oder erstellt neue; `t n <name>` neue Session; `t ls` / `t ks` list/kill)
 - `..`, `...`, `....` → `cd` Shortcuts
 - `ll`, `la` → `ls` Varianten
-- `dps`, `dlogs` → Docker-Shortcuts
