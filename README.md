@@ -6,7 +6,7 @@ Primäres Target: Raspberry Pi 5 mit Raspberry Pi OS (Debian, aarch64).
 ## Quickstart
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/jakobneri/linux_essentials/master/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/jakobneri/linux_essentials/main/install.sh | bash
 ```
 
 Oder manuell:
@@ -27,6 +27,8 @@ cd linux_essentials
    - `tmux/.tmux.conf` → `~/.tmux.conf`
    - `btop/themes/pastel.theme` → `~/.config/btop/themes/pastel.theme`
    - `htop/htoprc` → `~/.config/htop/htoprc`
+   - `claude/settings.json` → `~/.claude/settings.json`
+   - `claude/statusline-command.sh` → `~/.claude/statusline-command.sh`
    - `bashrc/aliases.sh` wird in `~/.bashrc` gesourced
 
 ## Struktur
@@ -44,17 +46,21 @@ linux_essentials/
 │       └── pastel.theme
 ├── htop/
 │   └── htoprc            # Pi-optimierte Config
+├── claude/
+│   ├── settings.json          # Claude Code Prefs (Plan-Mode-Default, Statusline, Theme)
+│   └── statusline-command.sh  # Statusline passend zum PS1-Theme
 └── programs/
-    └── install.sh        # installiert Standard-Programme
+    └── install.sh        # installiert Standard-Programme + Claude Code CLI
 ```
 
 ## Programme
 
-Installiert via `programs/install.sh` (alles über `apt`):
+Installiert via `programs/install.sh`:
 
-- `tmux`
-- `btop`
-- `htop`
+- `tmux` (apt)
+- `btop` (apt)
+- `htop` (apt)
+- [Claude Code](https://claude.ai/download) (nativer Installer, `curl -fsSL https://claude.ai/install.sh | bash`)
 
 ## Shortcuts
 
