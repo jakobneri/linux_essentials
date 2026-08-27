@@ -23,11 +23,13 @@ cd "$REPO_DIR"
 bash programs/install.sh
 
 # 3. Configs symlinken
-mkdir -p "$HOME/.config/btop/themes" "$HOME/.config/htop"
+mkdir -p "$HOME/.config/btop/themes" "$HOME/.config/htop" "$HOME/.claude"
 
 ln -sf "$REPO_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf"
 ln -sf "$REPO_DIR/btop/themes/pastel.theme" "$HOME/.config/btop/themes/pastel.theme"
 ln -sf "$REPO_DIR/htop/htoprc" "$HOME/.config/htop/htoprc"
+ln -sf "$REPO_DIR/claude/settings.json" "$HOME/.claude/settings.json"
+ln -sf "$REPO_DIR/claude/statusline-command.sh" "$HOME/.claude/statusline-command.sh"
 
 SOURCE_LINE="source \"$REPO_DIR/bashrc/aliases.sh\""
 if ! grep -qF "$SOURCE_LINE" "$HOME/.bashrc" 2>/dev/null; then
